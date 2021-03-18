@@ -1,0 +1,5 @@
+export const GET_INVENTORY = 'GET_INVENTORY'
+export const GET_PRODUCTS = 'GET_PRODUCTS'
+export const GET_USAGE = 'GET_USAGE'
+export const GET_CHILDREN = 'GET_CHILDREN'
+export const GET_LASTORDER = 'GET_LASTORDER'

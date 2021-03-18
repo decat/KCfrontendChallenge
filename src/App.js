@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import InventoryContainer from './components/inventory/inventoryContainer'
+import UsageContainer from './components/usage/usageContainer'
+import ProductsContainer from './components/products/productsContainer'
+import ChildrenContainer from './components/children/childrenContainer'
+import OverviewContainer from './components/overview/overviewContainer'
+import { Route, Redirect, Switch } from "react-router-dom";
+import Navbar from './components/navbar/Navbar'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div id="main">
+    <Navbar />
+    <Switch>
+      <Route exact path="/home" component={OverviewContainer} />
+      {/* <Route exact path="/inventory" component={InventoryContainer} />
+      <Route exact path="/usage" component={UsageContainer} />
+      in progress
+      */}
+      <Route exact path="/products" component={ProductsContainer} />
+      <Route exact path="/children" component={ChildrenContainer} />
+      <Redirect from="/" to="/home" />
+        </Switch>
+        
+      </div>
   );
 }
 
