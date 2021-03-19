@@ -6,10 +6,7 @@ import { getInventory } from '../../action-creator/inventory'
 import Overview from './overview'
 
 class OverviewContainer extends React.Component {
-    constructor(props, context) {
-        super(props, context);
-        
-    }
+   
 
     componentDidMount() { //this will trigger unnecessary renders, ok for small app
         this.props.getProducts()

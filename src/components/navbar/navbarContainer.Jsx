@@ -4,16 +4,14 @@ import Navbar from "./Navbar"
 import { getChildren } from '../../action-creator/children'
 
 class NavbarContainer extends React.Component {
-    constructor(props, context) {
-        super(props, context);
-        
-    }
+    
     componentDidMount() {
         this.props.getChildren()
     }
     
 
     render() {
+        const { children } = this.props
         return (
             <Navbar children={children}/>
         );

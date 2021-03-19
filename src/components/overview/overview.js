@@ -8,9 +8,8 @@ export default function ({ products, usage, inventory }) {
       usage.usage.length >= 1 &&
       inventory.inventory.length >= 1 ? (
         products.products.map((item1) => (
-          <div key={item1.id}>
-            {" "}
-            <Card style={{ width: "18rem" }}>
+         
+            <Card key={item1.id} style={{ width: "18rem" }}>
               <Card.Header>{item1.Product}</Card.Header>
               <ListGroup variant="flush">
                 <ListGroup.Item>
@@ -35,7 +34,6 @@ export default function ({ products, usage, inventory }) {
                 </ListGroup.Item>
               </ListGroup>
             </Card>
-          </div>
         ))
       ) : (
         <Spinner animation="grow" />

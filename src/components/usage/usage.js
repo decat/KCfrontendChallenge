@@ -1,9 +1,7 @@
 import Link from 'react-router-dom'
-import { Button, Spinner, Card } from 'react-bootstrap'
+import { Spinner, Card } from 'react-bootstrap'
 
 export default function ({usage}) {
-    console.log("usage in displaycomp:", usage)
-    console.log("tricky ternary : ", usage.length)
     return (
         <div>
             {usage.usage.length >= 1 

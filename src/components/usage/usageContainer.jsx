@@ -4,10 +4,7 @@ import { getUsage } from '../../action-creator/usage'
 import Usage from './usage'
 
 class UsageContainer extends React.Component {
-    constructor(props, context) {
-        super(props, context);
-        
-    }
+    
 
     componentDidMount() {
         this.props.getUsage()
@@ -16,7 +13,6 @@ class UsageContainer extends React.Component {
 
     render() {
         const { usage } = this.props
-        console.log("usage is in usageContainer : ", usage)
         return (
             <div>
                 <h1>Display usage </h1>

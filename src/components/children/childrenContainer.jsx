@@ -5,10 +5,7 @@ import { getProducts } from '../../action-creator/products'
 import Children from './children'
 
 class ChildrenContainer extends React.Component {
-    constructor(props, context) {
-        super(props, context);
-        
-    }
+  
 
     componentDidMount() {
         this.props.getProducts()
@@ -18,7 +15,6 @@ class ChildrenContainer extends React.Component {
 
     render() {
         const { children, products } = this.props
-        console.log("children is in Container : ", children)
         return (
             <div>
                 <h1>Display Children </h1>

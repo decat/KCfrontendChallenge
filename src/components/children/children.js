@@ -2,8 +2,6 @@ import Link from 'react-router-dom'
 import { Button, CardGroup, Card, Spinner } from 'react-bootstrap'
 
 export default function ({children, products}) {
-    console.log("children in displaycomp:", children)
-    console.log("tricky ternary : ", children.length)
     return (
         <CardGroup>
             {products.products.length >= 1 && children.children.length >= 1 

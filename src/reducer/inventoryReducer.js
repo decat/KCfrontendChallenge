@@ -1,4 +1,4 @@
-import { GET_INVENTORY, UPDATE_INVENTORY, DELETE_INVENTORY } from '../constants'
+import { GET_INVENTORY } from '../constants'
 
 const initialState  = {
     inventory : {}
